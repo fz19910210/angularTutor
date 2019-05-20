@@ -6,3 +6,20 @@
   width: 300px;
   border-color: cornflowerblue;
 }
+.container {
+  position: relative;
+  border: solid green;
+  padding: 0;
+  width: 60%;
+}
+nav{
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  border: 3px solid red;
+}
+
+section{
+  border: 3px white;
+  padding: 20px;
+}

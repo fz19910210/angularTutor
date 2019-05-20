@@ -11,19 +11,51 @@ export class ServerComponent {
     serverId = 10;
     serverStatus = 'offLine';
     counter = 0;
+    meatName = "肉类";
+    vegName = "蔬菜";
+    res: string
     isLogin = false;
     userName: string;
     students: Student[] = [new Student('Bill Gates', 'Computer Science'),
                            new Student('Steve Jobs', 'Computer Science'),
                            new Student('Elon Musk', 'Computer Science')];
 
-    getServerStatus() {
-      return this.serverStatus;
+
+    porkPicked(){
+      this.meatName = '猪肉';
     }
 
-    counterPlus() {
-     this.counter ++;
+    beefPicked(){
+      this.meatName = '牛肉';
     }
+
+    chickenPicked(){
+      this.meatName = '鸡肉';
+    }
+
+    carrotPicked(){
+      this.vegName = '萝卜';
+    }
+
+    tomatoPicked(){
+      this.vegName = '番茄';
+    }
+
+    potatoPicked(){
+      this.vegName = '土豆';
+    }
+
+    mixThem(){
+      if (this.meatName == "猪肉" && this.vegName == "萝卜"){
+        this.res = "黑暗料理";
+      }
+      else if (this.meatName == "牛肉" && this.vegName == "萝卜"){
+        this.res = "萝卜顿牛腩";
+      }
+
+    }
+
+
 
     resetCounter() {
       this.counter = 0;
